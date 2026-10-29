@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard | Shalom Funeral Policy</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          ☰ Menu
+        </button>
+        <ul class="nav-tabs" id="primary-navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="site-search container" aria-label="Search the website">
+      <label for="site-search-input">Search the website</label>
+      <div class="search-row">
+        <input
+          id="site-search-input"
+          type="search"
+          placeholder="Search pages, premiums, benefits..."
+        /><button
+          id="site-search-clear"
+          type="button"
+          class="button button-outline"
+        >
+          Clear
+        </button>
+      </div>
+      <div
+        id="site-search-results"
+        class="search-results"
+        aria-live="polite"
+      ></div>
+    </section>
+    <main class="page-shell">
+      <div class="page-intro">
+        <p class="eyebrow">Local demonstration only</p>
+        <h1>Admin dashboard</h1>
+        <p>
+          Review customer registrations and enquiries submitted in this browser.
+        </p>
+      </div>
+      <div class="notice">
+        <strong>Security notice:</strong> This dashboard has no login and uses
+        browser localStorage. Anyone using this browser can open it and view or
+        delete demo records. It is not suitable for real customer data or
+        production use. A secure backend with authenticated admin access is
+        required before launch.
+      </div>
+      <div id="admin-dashboard">
+        <div class="admin-grid">
+          <div class="admin-stat">
+            <span>Demo registrations</span
+            ><strong id="customer-count">0</strong>
+          </div>
+          <div class="admin-stat">
+            <span>Saved enquiries</span><strong id="enquiry-count">0</strong>
+          </div>
+          <div class="admin-stat">
+            <span>Records from last 7 days</span
+            ><strong id="latest-count">0</strong>
+          </div>
+        </div>
+        <div class="admin-card">
+          <h2>Customer registrations</h2>
+          <p>
+            <button id="export-customers" class="button">
+              Export registrations as CSV
+            </button>
+            <button id="clear-demo-data" class="button button-outline">
+              Clear all demo data
+            </button>
+          </p>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Reference</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Interest</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="admin-customers">
+              <tr>
+                <td colspan="6">Loading…</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="admin-card">
+          <h2>Saved enquiries</h2>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Topic</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tbody id="admin-enquiries">
+              <tr>
+                <td colspan="5">Loading…</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p>© Shalom Funeral Policy. All rights reserved.</p>
+        <p>
+          Phone/WhatsApp: <a href="tel:0810738145">081 073 8145</a> /
+          <a href="tel:0739256401">073 925 6401</a>
+        </p>
+        <a
+          class="button whatsapp-link"
+          href="https://wa.me/27810738145"
+          target="_blank"
+          rel="noopener"
+          >WhatsApp Shalom</a
+        >
+      </div>
+    </footer>
+    <button id="back-to-top" type="button" aria-label="Back to top">↑</button>
+    <script src="js/app.js" defer></script>
+  </body>
+</html>
