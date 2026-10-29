@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Customer Registration | Shalom Funeral Policy</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          ☰ Menu
+        </button>
+        <ul class="nav-tabs" id="primary-navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="site-search container" aria-label="Search the website">
+      <label for="site-search-input">Search the website</label>
+      <div class="search-row">
+        <input
+          id="site-search-input"
+          type="search"
+          placeholder="Search pages, premiums, benefits..."
+        /><button
+          id="site-search-clear"
+          type="button"
+          class="button button-outline"
+        >
+          Clear
+        </button>
+      </div>
+      <div
+        id="site-search-results"
+        class="search-results"
+        aria-live="polite"
+      ></div>
+    </section>
+    <main class="page-shell">
+      <div class="page-intro">
+        <p class="eyebrow">Customer details</p>
+        <h1>Customer registration</h1>
+        <p>
+          Share your contact details so a Shalom representative can follow up.
+          All fields marked * are required.
+        </p>
+      </div>
+      <div class="notice">
+        <strong>Important:</strong> This is a website demonstration. It stores
+        data only in this browser and is not a secure insurance application. Do
+        not enter identity numbers, banking details, or other sensitive
+        information. Registration does not activate cover.
+      </div>
+      <form id="registration-form" class="feature-card form-grid" novalidate>
+        <div>
+          <label for="reg-name">Full name *</label
+          ><input
+            id="reg-name"
+            name="name"
+            autocomplete="name"
+            required
+            minlength="2"
+            maxlength="100"
+          />
+        </div>
+        <div>
+          <label for="reg-phone">Phone number *</label
+          ><input
+            id="reg-phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            required
+            pattern="[0-9+() -]{7,20}"
+            placeholder="e.g. 081 073 8145"
+          />
+        </div>
+        <div>
+          <label for="reg-email">Email address</label
+          ><input
+            id="reg-email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            maxlength="150"
+          />
+        </div>
+        <div>
+          <label for="reg-age">Age *</label
+          ><input
+            id="reg-age"
+            name="age"
+            type="number"
+            min="18"
+            max="84"
+            required
+          />
+        </div>
+        <div>
+          <label for="reg-area">Town / area *</label
+          ><input
+            id="reg-area"
+            name="area"
+            required
+            minlength="2"
+            maxlength="100"
+            autocomplete="address-level2"
+          />
+        </div>
+        <div>
+          <label for="reg-interest">What would you like to discuss? *</label
+          ><select id="reg-interest" name="interest" required>
+            <option value="">Choose one</option>
+            <option>Individual cover</option>
+            <option>Family cover</option>
+            <option>Premium and plan details</option>
+            <option>Claims information</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="full-width">
+          <label
+            ><input
+              type="checkbox"
+              name="consent"
+              required
+              style="width: auto"
+            />
+            I agree that Shalom may contact me about this enquiry. *</label
+          >
+        </div>
+        <p class="form-message full-width" aria-live="polite"></p>
+        <div class="full-width form-actions">
+          <button class="button" type="submit">Save demo registration</button
+          ><a class="button button-outline" href="enquiry.html"
+            >Ask a question</a
+          >
+        </div>
+      </form>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p>© Shalom Funeral Policy. All rights reserved.</p>
+        <p>
+          Phone/WhatsApp: <a href="tel:0810738145">081 073 8145</a> /
+          <a href="tel:0739256401">073 925 6401</a>
+        </p>
+        <a
+          class="button whatsapp-link"
+          href="https://wa.me/27810738145"
+          target="_blank"
+          rel="noopener"
+          >WhatsApp Shalom</a
+        >
+      </div>
+    </footer>
+    <button id="back-to-top" type="button" aria-label="Back to top">↑</button>
+    <script src="js/app.js" defer></script>
+  </body>
+</html>
