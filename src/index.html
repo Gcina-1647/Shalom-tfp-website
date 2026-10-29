@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Affordable Shalom TopUp Funeral Policy information, benefits, offices and enquiries."
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Home | Shalom Funeral Policy</title>
   </head>
@@ -10,7 +14,15 @@
     <!-- Navbar -->
     <nav class="navbar">
       <div class="container nav-container">
-        <ul class="nav-tabs">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          ☰ Menu
+        </button>
+        <ul class="nav-tabs" id="primary-navigation">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="products.html">Products</a></li>
@@ -20,6 +32,28 @@
       </div>
     </nav>
 
+    <section class="site-search container" aria-label="Search the website">
+      <label for="site-search-input">Search the website</label>
+      <div class="search-row">
+        <input
+          id="site-search-input"
+          type="search"
+          placeholder="Search pages, premiums, benefits..."
+          autocomplete="off"
+        /><button
+          id="site-search-clear"
+          type="button"
+          class="button button-outline"
+        >
+          Clear
+        </button>
+      </div>
+      <div
+        id="site-search-results"
+        class="search-results"
+        aria-live="polite"
+      ></div>
+    </section>
     <!-- Header -->
     <header class="header">
       <div class="container header-container">
@@ -48,6 +82,18 @@
         />
       </div>
     </header>
+
+    <!-- Quick search -->
+    <section class="quick-tools container" aria-label="Quick page search">
+      <label for="page-search">Search this page</label>
+      <input
+        id="page-search"
+        type="search"
+        placeholder="Try: premiums, office, benefits..."
+        autocomplete="off"
+      />
+      <p id="search-status" aria-live="polite"></p>
+    </section>
 
     <!-- Boxes -->
     <section class="boxes">
@@ -103,6 +149,177 @@
       </div>
     </section>
 
+    <!-- Interactive policy tools -->
+    <section class="feature-section container" id="premium-calculator">
+      <div class="section-heading">
+        <p class="eyebrow">Plan with confidence</p>
+        <h2>Premium calculator</h2>
+        <p>
+          Get an indicative estimate based on the published monthly premium
+          range. Final rates depend on the selected plan and transport
+          arrangements.
+        </p>
+      </div>
+      <form id="premium-form" class="feature-card">
+        <label for="plan-choice">Policy estimate</label>
+        <select id="plan-choice" name="plan" required>
+          <option value="standard">Standard estimate</option>
+          <option value="transport">Plan with transport (confirm rate)</option>
+        </select>
+        <label for="members-count">Number of family members to discuss</label>
+        <input
+          id="members-count"
+          name="members"
+          type="number"
+          min="1"
+          max="30"
+          value="1"
+          required
+        />
+        <button type="submit" class="button">Calculate estimate</button>
+        <div id="premium-result" class="result-panel" aria-live="polite">
+          <p>Select your details and calculate to view an estimate.</p>
+        </div>
+        <p class="fine-print">
+          Published information lists monthly premiums of R130–R150 and a
+          once-off joining fee of R50. This estimate is not a quote or
+          confirmation of eligibility.
+        </p>
+      </form>
+    </section>
+
+    <section class="feature-section container" id="benefits">
+      <div class="section-heading">
+        <p class="eyebrow">Understand your cover</p>
+        <h2>Policy benefits and rules</h2>
+        <p>Choose a topic to read more.</p>
+      </div>
+      <div class="benefit-list">
+        <details class="benefit-item">
+          <summary>Funeral assistance and services</summary>
+          <p>
+            Listed services include body collection and burial arrangement
+            assistance, a coffin, 50 funeral programmes, tent decoration, audio
+            setup, grave-site services and obituary options. Confirm the exact
+            benefits available under your chosen plan.
+          </p>
+        </details>
+        <details class="benefit-item">
+          <summary>Premiums and joining fee</summary>
+          <p>
+            The homepage lists a once-off joining fee of R50 and monthly
+            premiums of R130–R150 depending on plan and transport. Contact
+            Shalom to confirm the exact premium before joining.
+          </p>
+        </details>
+        <details class="benefit-item">
+          <summary>Waiting periods</summary>
+          <p>
+            New entrants have a six-month waiting period. Accidental death has
+            no waiting period if the first premium has been paid. Suicide
+            carries a 12-month waiting period.
+          </p>
+        </details>
+        <details class="benefit-item">
+          <summary>Entry age and payments</summary>
+          <p>
+            The listed entry age is 18 to 84 years. Premiums are payable monthly
+            in advance. Ask Shalom for the policy wording and full terms.
+          </p>
+        </details>
+        <details class="benefit-item">
+          <summary>Claims assistance</summary>
+          <p>
+            The current homepage says claims are processed through Shalom or SAS
+            assistance. Contact the office to confirm the current claims process
+            and required documents.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section class="feature-section container" id="register-cta">
+      <div class="feature-card feature-cta">
+        <div>
+          <p class="eyebrow">Get started</p>
+          <h2>Interested in joining?</h2>
+          <p>
+            Submit your details for follow-up. Registration on this
+            demonstration website does not create insurance cover or submit a
+            binding application.
+          </p>
+        </div>
+        <a class="button" href="register.html">Customer registration</a>
+      </div>
+    </section>
+
+    <section class="feature-section container" id="quick-enquiry">
+      <div class="section-heading">
+        <p class="eyebrow">We are here to help</p>
+        <h2>Quick enquiry</h2>
+      </div>
+      <form id="quick-enquiry-form" class="feature-card form-grid" novalidate>
+        <div>
+          <label for="quick-name">Full name</label
+          ><input
+            id="quick-name"
+            name="name"
+            autocomplete="name"
+            required
+            minlength="2"
+          />
+        </div>
+        <div>
+          <label for="quick-phone">Phone number</label
+          ><input
+            id="quick-phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            required
+            pattern="[0-9+() -]{7,20}"
+          />
+        </div>
+        <div class="full-width">
+          <label for="quick-topic">What would you like to know?</label>
+          <select id="quick-topic" name="topic" required>
+            <option value="">Choose a topic</option>
+            <option>Premiums and plans</option>
+            <option>Benefits</option>
+            <option>Waiting periods</option>
+            <option>Claims assistance</option>
+            <option>Office locations</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="full-width">
+          <label for="quick-message">Message</label
+          ><textarea
+            id="quick-message"
+            name="message"
+            rows="4"
+            required
+            minlength="10"
+          ></textarea>
+        </div>
+        <p class="form-message full-width" aria-live="polite"></p>
+        <div class="full-width form-actions">
+          <button class="button" type="submit">Prepare enquiry</button
+          ><a
+            class="button button-outline whatsapp-link"
+            href="https://wa.me/27810738145"
+            target="_blank"
+            rel="noopener"
+            >WhatsApp Shalom</a
+          >
+        </div>
+        <p class="fine-print full-width">
+          Your enquiry will be prepared for WhatsApp. This static website does
+          not send or store enquiries on a secure server.
+        </p>
+      </form>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container footer-container">
@@ -114,9 +331,21 @@
         <div class="footer-right">
           <h3>Follow Us</h3>
           <ul class="social-links">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">TikTok</a></li>
+            <li>
+              <a href="#" class="social-placeholder" data-platform="Facebook"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="#" class="social-placeholder" data-platform="Instagram"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href="#" class="social-placeholder" data-platform="TikTok"
+                >TikTok</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -164,5 +393,22 @@
         </div>
       </div>
     </footer>
+
+    <button
+      id="back-to-top"
+      type="button"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      ↑
+    </button>
+    <div
+      id="site-notice"
+      class="site-notice"
+      role="status"
+      aria-live="polite"
+    ></div>
+
+    <script src="js/app.js" defer></script>
   </body>
 </html>
