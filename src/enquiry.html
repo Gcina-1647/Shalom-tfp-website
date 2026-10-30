@@ -1,683 +1,146 @@
 <!doctype html>
-<html lang="en-ZA">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <meta
-      name="description"
-      content="Contact Shalom Funeral Policy for information about funeral cover, membership and benefits."
-    />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Enquiry | Shalom Funeral Policy</title>
-
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/enquiry.css" />
-
-    <style>
-      :root {
-        --shalom-primary: #174b35;
-        --shalom-dark: #103525;
-        --shalom-accent: #d6ad52;
-        --shalom-light: #f5f8f5;
-        --shalom-text: #26332c;
-        --shalom-muted: #637168;
-        --shalom-border: #dce5de;
-        --shalom-white: #ffffff;
-        --shalom-radius: 12px;
-        --shalom-shadow: 0 8px 28px rgba(16, 53, 37, 0.08);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        margin: 0;
-        color: var(--shalom-text);
-        line-height: 1.6;
-      }
-
-      a {
-        overflow-wrap: anywhere;
-      }
-
-      .container {
-        width: min(1100px, 92%);
-        margin-inline: auto;
-      }
-
-      .navbar {
-        position: relative;
-        z-index: 10;
-        background: var(--shalom-primary);
-        color: var(--shalom-white);
-      }
-
-      .nav-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        min-height: 68px;
-      }
-
-      .nav-toggle {
-        display: none;
-        padding: 0.65rem 0.9rem;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 6px;
-        background: transparent;
-        color: white;
-        font: inherit;
-        cursor: pointer;
-      }
-
-      .nav-tabs {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .nav-tabs a {
-        display: block;
-        padding: 0.7rem 1rem;
-        border-radius: 6px;
-        color: white;
-        text-decoration: none;
-        transition: background 0.2s ease;
-      }
-
-      .nav-tabs a:hover,
-      .nav-tabs a:focus-visible,
-      .nav-tabs a[aria-current="page"] {
-        background: rgba(255, 255, 255, 0.16);
-        outline-offset: 3px;
-      }
-
-      .enquiry-header {
-        padding: clamp(2rem, 5vw, 4rem) 0;
-        background: var(--shalom-light);
-      }
-
-      .header-container {
-        max-width: 760px;
-      }
-
-      .policy-notice {
-        padding: 1.2rem 1.4rem;
-        margin-bottom: 2rem;
-        border-left: 5px solid var(--shalom-accent);
-        border-radius: 8px;
-        background: var(--shalom-white);
-        box-shadow: var(--shalom-shadow);
-      }
-
-      .policy-notice h2 {
-        margin-top: 0;
-        font-size: 1.15rem;
-        color: var(--shalom-primary);
-      }
-
-      .policy-notice p {
-        margin-bottom: 0;
-      }
-
-      .page-heading {
-        margin-bottom: 1.5rem;
-      }
-
-      .page-heading h1 {
-        margin-bottom: 0.4rem;
-        color: var(--shalom-primary);
-        font-size: clamp(2rem, 5vw, 2.8rem);
-        line-height: 1.2;
-      }
-
-      .page-heading p {
-        color: var(--shalom-muted);
-      }
-
-      .enquiry-form {
-        display: grid;
-        gap: 0.65rem;
-        padding: clamp(1.2rem, 4vw, 2rem);
-        border: 1px solid var(--shalom-border);
-        border-radius: var(--shalom-radius);
-        background: var(--shalom-white);
-        box-shadow: var(--shalom-shadow);
-      }
-
-      .enquiry-form label {
-        margin-top: 0.45rem;
-        font-weight: 600;
-      }
-
-      .enquiry-form input,
-      .enquiry-form textarea {
-        width: 100%;
-        padding: 0.85rem 1rem;
-        border: 1px solid #bdcbc1;
-        border-radius: 7px;
-        background: white;
-        color: var(--shalom-text);
-        font: inherit;
-      }
-
-      .enquiry-form textarea {
-        min-height: 150px;
-        resize: vertical;
-      }
-
-      .enquiry-form input:focus,
-      .enquiry-form textarea:focus {
-        border-color: var(--shalom-primary);
-        outline: 3px solid rgba(23, 75, 53, 0.13);
-      }
-
-      .required-note,
-      .privacy-note {
-        color: var(--shalom-muted);
-        font-size: 0.9rem;
-      }
-
-      .form-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.8rem;
-        margin-top: 1rem;
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 46px;
-        padding: 0.75rem 1.2rem;
-        border: 0;
-        border-radius: 7px;
-        font: inherit;
-        font-weight: 700;
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
-        transition:
-          transform 0.2s ease,
-          background 0.2s ease;
-      }
-
-      .btn:hover {
-        transform: translateY(-1px);
-      }
-
-      .btn-primary {
-        background: var(--shalom-primary);
-        color: white;
-      }
-
-      .btn-primary:hover {
-        background: var(--shalom-dark);
-      }
-
-      .btn-secondary {
-        border: 1px solid var(--shalom-primary);
-        background: white;
-        color: var(--shalom-primary);
-      }
-
-      .form-status {
-        min-height: 1.5rem;
-        margin: 0.5rem 0 0;
-        font-weight: 600;
-      }
-
-      .form-status.error {
-        color: #a12626;
-      }
-
-      .form-status.success {
-        color: var(--shalom-primary);
-      }
-
-      .footer {
-        padding: 2.5rem 0 1rem;
-        background: #102c20;
-        color: white;
-      }
-
-      .footer-container {
-        display: flex;
-        justify-content: space-between;
-        gap: 2rem;
-        flex-wrap: wrap;
-      }
-
-      .footer h3,
-      .footer h4 {
-        color: white;
-      }
-
-      .footer-left,
-      .footer-right {
-        flex: 1 1 240px;
-      }
-
-      .social-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        padding: 0;
-        list-style: none;
-      }
-
-      .footer a {
-        color: #f2d995;
-      }
-
-      .footer-maps {
-        padding-top: 1.5rem;
-      }
-
-      .footer-maps > h3 {
-        text-align: center;
-      }
-
-      .map-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-        gap: 1.5rem;
-      }
-
-      .map-box {
-        min-width: 0;
-        padding: 1rem;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: var(--shalom-radius);
-        background: rgba(255, 255, 255, 0.05);
-      }
-
-      .map-box h4 {
-        margin-top: 0;
-      }
-
-      .map-box iframe {
-        display: block;
-        width: 100%;
-        height: 260px;
-        border: 0;
-        border-radius: 8px;
-      }
-
-      .copyright {
-        padding-top: 1.5rem;
-        margin-top: 1.5rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-        text-align: center;
-        font-size: 0.9rem;
-      }
-
-      .skip-link {
-        position: absolute;
-        top: -100px;
-        left: 1rem;
-        z-index: 20;
-        padding: 0.7rem 1rem;
-        background: white;
-        color: var(--shalom-primary);
-      }
-
-      .skip-link:focus {
-        top: 1rem;
-      }
-
-      @media (max-width: 640px) {
-        .nav-container {
-          align-items: stretch;
-          flex-direction: column;
-          padding-block: 0.75rem;
-        }
-
-        .nav-toggle {
-          display: block;
-          align-self: flex-start;
-        }
-
-        .nav-tabs {
-          display: none;
-          align-items: stretch;
-          flex-direction: column;
-          width: 100%;
-        }
-
-        .nav-tabs.is-open {
-          display: flex;
-        }
-
-        .nav-tabs a {
-          padding: 0.75rem;
-        }
-
-        .form-actions {
-          flex-direction: column;
-        }
-
-        .form-actions .btn {
-          width: 100%;
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-
-        *,
-        *::before,
-        *::after {
-          transition-duration: 0.01ms !important;
-          animation-duration: 0.01ms !important;
-        }
-      }
-    </style>
   </head>
-
   <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-
-    <nav class="navbar" aria-label="Main navigation">
+    <nav class="navbar">
       <div class="container nav-container">
         <button
-          class="nav-toggle"
+          class="menu-toggle"
           type="button"
           aria-expanded="false"
-          aria-controls="main-navigation"
+          aria-controls="primary-navigation"
         >
-          Menu ☰
+          ☰ Menu
         </button>
-
-        <ul class="nav-tabs" id="main-navigation">
+        <ul class="nav-tabs" id="primary-navigation">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="products.html">Products</a></li>
-          <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="register.html">Register</a></li>
         </ul>
       </div>
     </nav>
-
-    <main id="main-content">
-      <section class="enquiry-header">
-        <div class="container header-container">
-          <aside class="policy-notice" aria-labelledby="policy-notice-title">
-            <h2 id="policy-notice-title">Important Policy Information</h2>
-            <p>
-              Membership becomes valid after 6 months. If premiums are unpaid
-              for 3 consecutive months, the policy lapses. Family cover includes
-              parents and up to six children under 21 years. Member + children
-              cover includes the member and up to six children under 21 years.
-            </p>
-          </aside>
-
-          <div class="page-heading">
-            <h1>Enquiry Form</h1>
-            <p>
-              Have questions about our funeral policy? Complete the form below
-              and continue to WhatsApp to send your enquiry to our team.
-            </p>
-          </div>
-
-          <form class="enquiry-form" id="enquiry-form">
-            <p class="required-note">Fields marked * are required.</p>
-
-            <label for="name">Full name *</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              autocomplete="name"
-              minlength="2"
-              maxlength="100"
-              placeholder="Enter your full name"
-              required
-            />
-
-            <label for="email">Email address *</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              autocomplete="email"
-              maxlength="254"
-              placeholder="you@example.com"
-              required
-            />
-
-            <label for="phone">Phone number (optional)</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              autocomplete="tel"
-              maxlength="25"
-              placeholder="e.g. 082 123 4567"
-            />
-
-            <label for="message">Your enquiry *</label>
-            <textarea
-              id="message"
-              name="message"
-              minlength="10"
-              maxlength="2000"
-              placeholder="Tell us what you would like to know about our funeral policy..."
-              required
-            ></textarea>
-
-            <p class="privacy-note">
-              Your details will be placed in a WhatsApp message for you to
-              review and send. This page does not save your information to a
-              database.
-            </p>
-
-            <div class="form-actions">
-              <button class="btn btn-primary" type="submit">
-                Continue to WhatsApp
-              </button>
-              <button class="btn btn-secondary" type="reset">Clear form</button>
-            </div>
-
-            <p
-              class="form-status"
-              id="form-status"
-              role="status"
-              aria-live="polite"
-            ></p>
-          </form>
+    <section class="site-search container" aria-label="Search the website">
+      <label for="site-search-input">Search the website</label>
+      <div class="search-row">
+        <input
+          id="site-search-input"
+          type="search"
+          placeholder="Search pages, premiums, benefits..."
+        /><button
+          id="site-search-clear"
+          type="button"
+          class="button button-outline"
+        >
+          Clear
+        </button>
+      </div>
+      <div
+        id="site-search-results"
+        class="search-results"
+        aria-live="polite"
+      ></div>
+    </section>
+    <main class="page-shell">
+      <div class="page-intro">
+        <p class="eyebrow">Contact our team</p>
+        <h1>Enquiry</h1>
+        <p>
+          Send your question about premiums, benefits, waiting periods or
+          claims. Complete the form and WhatsApp will open with your message
+          ready for review.
+        </p>
+      </div>
+      <form id="quick-enquiry-form" class="feature-card form-grid" novalidate>
+        <div>
+          <label for="quick-name">Full name *</label
+          ><input
+            id="quick-name"
+            name="name"
+            autocomplete="name"
+            required
+            minlength="2"
+            placeholder="Your full name"
+          />
         </div>
-      </section>
+        <div>
+          <label for="quick-phone">Phone number *</label
+          ><input
+            id="quick-phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            required
+            pattern="[0-9+() -]{7,20}"
+            placeholder="e.g. 081 073 8145"
+          />
+        </div>
+        <div class="full-width">
+          <label for="quick-topic">Enquiry topic *</label
+          ><select id="quick-topic" name="topic" required>
+            <option value="">Choose a topic</option>
+            <option>Premiums and plans</option>
+            <option>Benefits</option>
+            <option>Waiting periods</option>
+            <option>Claims assistance</option>
+            <option>Office locations</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="full-width">
+          <label for="quick-message">Message *</label
+          ><textarea
+            id="quick-message"
+            name="message"
+            rows="5"
+            required
+            minlength="10"
+            placeholder="How can we help?"
+          ></textarea>
+        </div>
+        <p class="form-message full-width" aria-live="polite"></p>
+        <div class="full-width form-actions">
+          <button class="button" type="submit">
+            Validate and open WhatsApp</button
+          ><a
+            class="button button-outline whatsapp-link"
+            href="https://wa.me/27810738145"
+            target="_blank"
+            rel="noopener"
+            >WhatsApp Shalom</a
+          >
+        </div>
+        <p class="fine-print full-width">
+          Submitting opens WhatsApp; you must review and send the message
+          yourself. A local copy may be saved in this browser for the demo admin
+          dashboard.
+        </p>
+      </form>
     </main>
-
     <footer class="footer">
       <div class="container">
-        <div class="footer-container">
-          <div class="footer-left">
-            <h3>Shalom Funeral Policy</h3>
-            <p>We are here to help with your funeral policy enquiries.</p>
-          </div>
-
-          <div class="footer-right">
-            <h3>Follow Us</h3>
-            <p>
-              Replace these placeholder links with your official social media
-              page URLs.
-            </p>
-            <ul class="social-links">
-              <li><a href="#" data-placeholder-link>Facebook</a></li>
-              <li><a href="#" data-placeholder-link>Instagram</a></li>
-              <li><a href="#" data-placeholder-link>TikTok</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <section class="footer-maps" aria-labelledby="office-heading">
-          <h3 id="office-heading">Our Offices</h3>
-
-          <div class="map-container">
-            <div class="map-box">
-              <h4>Mthatha Office — Map 1</h4>
-              <iframe
-                title="Map showing the first Mthatha office location"
-                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3269.391829894581!2d28.48902126894337!3d-31.613419936713303!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1790331233607!5m2!1sen!2sza"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
-
-            <div class="map-box">
-              <h4>Mthatha Office — Map 2</h4>
-              <iframe
-                title="Map showing the second Mthatha office location"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6713.548695125029!2d28.65916570067119!3d-31.54777387535346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1790330222665!5m2!1sen!2sza"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
-
-            <div class="map-box">
-              <h4>Cape Town Office</h4>
-              <iframe
-                title="Map showing the Cape Town office near Dunoon"
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d207.17129630194643!2d18.54341540076954!3d-33.81900299637479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s216%20New%20Rest%2C%20Dunoon%207741%20(next%20to%20N7)!5e0!3m2!1sen!2sza!4v1790330700147!5m2!1sen!2sza"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </section>
-
-        <div class="copyright">
-          <p>
-            &copy; <span id="current-year"></span> Shalom Funeral Policy. All
-            rights reserved.
-          </p>
-        </div>
+        <p>© Shalom Funeral Policy. All rights reserved.</p>
+        <p>
+          Phone/WhatsApp: <a href="tel:0810738145">081 073 8145</a> /
+          <a href="tel:0739256401">073 925 6401</a>
+        </p>
+        <a
+          class="button whatsapp-link"
+          href="https://wa.me/27810738145"
+          target="_blank"
+          rel="noopener"
+          >WhatsApp Shalom</a
+        >
       </div>
     </footer>
-
-    <script>
-      "use strict";
-
-      // Keep the copyright year current.
-      document.getElementById("current-year").textContent =
-        new Date().getFullYear();
-
-      // Accessible mobile navigation.
-      const menuButton = document.querySelector(".nav-toggle");
-      const navigation = document.getElementById("main-navigation");
-
-      menuButton.addEventListener("click", () => {
-        const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-
-        menuButton.setAttribute("aria-expanded", String(!isOpen));
-        navigation.classList.toggle("is-open", !isOpen);
-        menuButton.textContent = isOpen ? "Menu ☰" : "Close ✕";
-      });
-
-      // Prevent placeholder social links from jumping to the top of the page.
-      document.querySelectorAll("[data-placeholder-link]").forEach((link) => {
-        link.addEventListener("click", (event) => {
-          event.preventDefault();
-          alert("Please add the official social media URL for this link.");
-        });
-      });
-
-      // Validate the enquiry and prepare a WhatsApp message.
-      const enquiryForm = document.getElementById("enquiry-form");
-      const statusMessage = document.getElementById("form-status");
-
-      // South African number supplied for the Shalom website.
-      // Confirm that this number is correct before publishing.
-      const WHATSAPP_NUMBER = "27810738145";
-
-      enquiryForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-
-        statusMessage.textContent = "";
-        statusMessage.className = "form-status";
-
-        if (!enquiryForm.checkValidity()) {
-          enquiryForm.reportValidity();
-          statusMessage.textContent =
-            "Please complete the required fields using valid information.";
-          statusMessage.classList.add("error");
-          return;
-        }
-
-        const formData = new FormData(enquiryForm);
-
-        const name = String(formData.get("name") || "").trim();
-        const email = String(formData.get("email") || "").trim();
-        const phone = String(formData.get("phone") || "").trim();
-        const message = String(formData.get("message") || "").trim();
-
-        if (name.length < 2 || message.length < 10) {
-          statusMessage.textContent =
-            "Please enter your name and a message with at least 10 characters.";
-          statusMessage.classList.add("error");
-          return;
-        }
-
-        const whatsappMessage = [
-          "Hello Shalom Funeral Policy,",
-          "",
-          "I would like to make an enquiry.",
-          "",
-          `Name: ${name}`,
-          `Email: ${email}`,
-          `Phone: ${phone || "Not provided"}`,
-          "",
-          "Enquiry:",
-          message,
-        ].join("\n");
-
-        const whatsappURL =
-          "https://wa.me/" +
-          WHATSAPP_NUMBER +
-          "?text=" +
-          encodeURIComponent(whatsappMessage);
-
-        statusMessage.textContent =
-          "Opening WhatsApp. Please review your message and press Send there.";
-        statusMessage.classList.add("success");
-
-        const whatsappWindow = window.open(
-          whatsappURL,
-          "_blank",
-          "noopener,noreferrer",
-        );
-
-        // Fallback if the browser blocks opening a new tab.
-        if (!whatsappWindow) {
-          window.location.href = whatsappURL;
-        }
-      });
-
-      // Clear old status messages when the form is reset.
-      enquiryForm.addEventListener("reset", () => {
-        statusMessage.textContent = "";
-        statusMessage.className = "form-status";
-      });
-    </script>
+    <button id="back-to-top" type="button" aria-label="Back to top">↑</button>
+    <script src="js/app.js" defer></script>
   </body>
 </html>

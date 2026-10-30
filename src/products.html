@@ -2,113 +2,117 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Products | Shalom Funeral Policy</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Navbar -->
     <nav class="navbar">
       <div class="container nav-container">
-        <ul class="nav-tabs">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          ☰ Menu
+        </button>
+        <ul class="nav-tabs" id="primary-navigation">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="products.html">Products</a></li>
           <li><a href="enquiry.html">Enquiry</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="register.html">Register</a></li>
         </ul>
       </div>
     </nav>
-    <header class="products-header">
-      <div class="container header-container">
-        <h1>Our Products & Benefits</h1>
-        <p>
-          We provide comprehensive funeral cover services tailored to your
-          needs:
-        </p>
-        <ul>
-          <li>Body collection and burial arrangement assistance</li>
-          <li>Provision of a coffin and 50 funeral programs</li>
-          <li>
-            Tent decoration, audio setup, grave site services, obituary options.
-          </li>
-        </ul>
-        <br />
-        <h2>Cover Options</h2>
-        <ul>
-          <li>Single Member Cover</li>
-          <li>Single + Children Cover</li>
-          <li>Family Cover</li>
-          <li>Extended Member Cover (children 0–17)</li>
-          <li>Member + 5, Member + 9, Member + 13 Cover</li>
-        </ul>
-        <p>
-          Premiums vary by age and cover amount. For example, a member aged
-          18–64 pays R39 for R5000 cover, or R159 for R20,000 cover. Children
-          (0–17) can be covered from R25 (R5000) to R62 (R20,000).
-        </p>
+    <section class="site-search container" aria-label="Search the website">
+      <label for="site-search-input">Search the website</label>
+      <div class="search-row">
+        <input
+          id="site-search-input"
+          type="search"
+          placeholder="Search pages, premiums, benefits..."
+        /><button
+          id="site-search-clear"
+          type="button"
+          class="button button-outline"
+        >
+          Clear
+        </button>
       </div>
-    </header>
-
-    <footer class="products-footer">
-      <div class="container footer-container">
-        <div class="footer-left">
-          <h3>Shalom Funeral Policy</h3>
-          <p>&copy; 2019 Shalom Funeral Policy. All rights reserved.</p>
-        </div>
-
-        <div class="footer-right">
-          <h3>Follow Us</h3>
-          <ul class="social-links">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">TikTok</a></li>
-          </ul>
-        </div>
+      <div
+        id="site-search-results"
+        class="search-results"
+        aria-live="polite"
+      ></div>
+    </section>
+    <main class="page-shell">
+      <div class="page-intro">
+        <p class="eyebrow">Products and benefits</p>
+        <h1>Products &amp; Benefits</h1>
+        <p>
+          Published service information includes body collection and burial
+          arrangement assistance, a coffin, 50 funeral programmes, tent
+          decoration, audio setup, grave-site services and obituary options.
+          Benefits may depend on the plan; confirm all inclusions with Shalom
+          before joining.
+        </p>
+        <p>
+          Monthly premiums are listed as R130–R150 depending on plan and
+          transport, with a once-off joining fee of R50.
+        </p>
+        <a class="button" href="index.html#premium-calculator"
+          >Estimate premium</a
+        >
+        <a class="button button-outline" href="enquiry.html"
+          >Ask about benefits</a
+        >
       </div>
-
-      <!-- Office Locations -->
-      <div class="footer-maps">
-        <h3>Our Offices</h3>
-        <div class="map-container">
-          <!-- Mthatha Office -->
-          <div class="map-box">
-            <h4>Mthatha Office</h4>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3269.391829894581!2d28.48902126894337!3d-31.613419936713303!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1790331233607!5m2!1sen!2sza"
-              width="200"
-              height="200"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-            ></iframe>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6713.548695125029!2d28.65916570067119!3d-31.54777387535346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1790330222665!5m2!1sen!2sza"
-              width="200"
-              height="200"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-            ></iframe>
-          </div>
-
-          <!-- Cape Town Office -->
-          <div class="map-box">
-            <h4>Cape Town Office</h4>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d207.17129630194643!2d18.54341540076954!3d-33.81900299637479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s216%20New%20Rest%2C%20Dunoon%207741%20(next%20to%20N7)!5e0!3m2!1sen!2sza!4v1790330700147!5m2!1sen!2sza"
-              width="200"
-              height="200"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-            ></iframe>
-          </div>
-        </div>
+      <section class="benefit-list">
+        <details class="benefit-item" open>
+          <summary>Funeral services</summary>
+          <p>
+            Body collection, burial arrangement assistance, coffin and funeral
+            programmes are listed services. Confirm eligibility and exact
+            inclusions.
+          </p>
+        </details>
+        <details class="benefit-item">
+          <summary>Venue and service support</summary>
+          <p>
+            Tent decoration, audio setup, grave-site services and obituary
+            options are listed. Ask which are included in your selected plan.
+          </p>
+        </details>
+        <details class="benefit-item">
+          <summary>Waiting periods</summary>
+          <p>
+            New entrants: six months. Accidental death: no waiting period if the
+            first premium is paid. Suicide: 12 months, according to the supplied
+            homepage text.
+          </p>
+        </details>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p>© Shalom Funeral Policy. All rights reserved.</p>
+        <p>
+          Phone/WhatsApp: <a href="tel:0810738145">081 073 8145</a> /
+          <a href="tel:0739256401">073 925 6401</a>
+        </p>
+        <a
+          class="button whatsapp-link"
+          href="https://wa.me/27810738145"
+          target="_blank"
+          rel="noopener"
+          >WhatsApp Shalom</a
+        >
       </div>
     </footer>
+    <button id="back-to-top" type="button" aria-label="Back to top">↑</button>
+    <script src="js/app.js" defer></script>
   </body>
 </html>
